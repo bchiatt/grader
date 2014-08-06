@@ -52,8 +52,9 @@ Student.prototype.addTest = function(grade){
     this.failTest();
   }
   this.tests.push({grade: test, color: color, gpa: gpa, letter: letter});
+  this.calcAvg();
 
-  Student.collection.update({_id:id.toString()},{$set:{tests:this.tests}});
+  //Student.collection.update({_id:id.toString()},{$set:{tests:this.tests}});
 };
 
 
@@ -64,7 +65,7 @@ Student.prototype.failTest = function(){
   var id = Mongo.ObjectID(this._id);
   if(this.failed >= 3){
     this.isSuspended = true;
-    Student.collection.update({_id:id.toString()},{$set:{isSuspended:true}});
+    //Student.collection.update({_id:id.toString()},{$set:{isSuspended:true}});
   }
   
 
@@ -75,7 +76,9 @@ Student.prototype.calcAvg = function(){
   for(var i = 0; i < this.tests.length; i++){
     sum += this.tests[i].grade;
   }
-  return Math.round(sum / this.tests.length);
+  var avg = Math.round(sum / this.tests.length);
+  avg > 95 ? this.isHonorRoll = true : this.isHonorRoll = false;
+  return avg;
 };
 
 

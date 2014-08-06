@@ -1,0 +1,65 @@
+html {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  background-color: #536DA3;
+}
+
+h1 {
+  text-align: center;
+  color: #FFED9A;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  margin: auto;
+  width: 455px;
+}
+
+nav div {
+  display: inline-block;
+  height: 30px;
+  text-align: center;
+  margin: 0 2.5px;
+  padding: 0;
+}
+
+nav div a {
+  color: #FFED9A;
+}
+
+nav div a:hover {
+  color: #536DA3;
+  background-color: #FFED9A;
+}
+
+#home {
+  width: 50px;
+}
+
+#about {
+  width: 50px;
+}
+
+#contact {
+  width: 50px;
+}
+
+#faq {
+  width: 50px;
+}
+
+#student {
+  width: 90px;
+}
+
+#students {
+  width: 135px;
+}
+
+#newstudent {
+  text-align: center;
+}

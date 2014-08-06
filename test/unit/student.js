@@ -81,6 +81,12 @@ describe('Student', function() {
 
       expect(grade).to.be.closeTo(80, 1);
     });
+    it('should add a student to honor roll if avg > 95', function(){
+      bill.addTest('96.0');
+      bill.addTest('97.0');
+
+      expect(bill.isHonorRoll).to.be.true;
+    });
   });
   describe('#save', function() {
     it('should save a student to the students collection', function(done){

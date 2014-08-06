@@ -1,0 +1,9 @@
+extends ../shared/template
+
+block content
+  #newtest
+    form(method='post', action='/students/434252')
+      input(name='name', type='text', placeholder='score', autofocus=true)
+      label %
+      br
+      button Add Test Score
